@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const tokensFilePath = path.join(__dirname, '../tokens.json');
-const newTokens = process.argv.slice(2);
+const name = process.argv[2];
+const newTokens = process.argv[3];
+const tokensFilePath = path.join(__dirname, `../tokens/${name}.json`);
 
 if (newTokens.length === 0) {
 	console.error('Please provide at least one token as an argument.');
 	process.exit(1);
 }
 
-// Overwrite the file with the new tokens
-fs.writeFileSync(tokensFilePath, JSON.stringify(newTokens, null, 2));
+fs.writeFileSync(tokensFilePath, newTokens[0]);
 console.log('Tokens replaced successfully.');

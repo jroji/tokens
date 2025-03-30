@@ -8,7 +8,9 @@ on:
 
   workflow_dispatch:
     inputs:
-      tokens:
+      colors:
+        required: true
+      sizes:
         required: true
 
 jobs:
@@ -18,8 +20,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Add color tokens
+        run: npm run add-tokens -- colors '${{ github.event.inputs.colors }}'
+      
+      - name: Add breakpoint tokens
+        run: npm run add-tokens -- sizes '${{ github.event.inputs.sizes }}'
+      
       - name: Run a one-line script
-        run: npm run add-tokens -- '${{ github.event.inputs.tokens }}'
+        run: npm run build-tokens
 
       - name: setup git config
         run: |

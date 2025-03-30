@@ -1,0 +1,47 @@
+{
+  "source": ["tokens/**/*.json"],
+  "platforms": {
+    "css": {
+      "prefix": "plural",
+      "transformGroup": "css",
+      "buildPath": "build/css/",
+      "files": [
+        {
+          "destination": "variables.css",
+          "format": "css/variables"
+        }
+      ]
+    },
+    "ios-swift": { 
+      "prefix": "plural",
+      "transformGroup": "ios-swift",
+      "buildPath": "build/ios-swift/",
+      "files": [
+        {
+          "destination": "StyleDictionary+Class.swift",
+          "format": "ios-swift/class.swift",
+          "options": {
+            "className": "StyleDictionaryClass"
+          }
+        },
+        {
+          "destination": "StyleDictionary+Enum.swift",
+          "format": "ios-swift/enum.swift",
+          "options": {
+            "className": "StyleDictionaryEnum"
+          }
+        },
+        {
+          "destination": "StyleDictionary+Struct.swift",
+          "format": "ios-swift/any.swift",
+          "options": {
+            "className": "StyleDictionaryStruct",
+            "imports": "SwiftUI",
+            "objectType": "struct",
+            "accessControl": "internal"
+          }
+        }
+      ]
+    }
+  }
+}
