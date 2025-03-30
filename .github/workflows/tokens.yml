@@ -41,6 +41,6 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          git add tokens.json
+          git add .
           git commit -m "feat: Updates tokens"
           git push origin main
