@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run a one-line script
-        run: npm run add-tokens -- "${{ github.event.inputs.tokens }}"
+        run: npm run add-tokens -- '${{ github.event.inputs.tokens }}'
 
       - name: setup git config
         run: |
