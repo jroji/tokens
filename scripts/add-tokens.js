@@ -10,5 +10,5 @@ if (newTokens.length === 0) {
 	process.exit(1);
 }
 
-fs.writeFileSync(tokensFilePath, newTokens[0]);
+fs.writeFileSync(tokensFilePath, newTokens);
 console.log('Tokens replaced successfully.');
