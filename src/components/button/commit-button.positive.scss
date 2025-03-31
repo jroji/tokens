@@ -1,0 +1,15 @@
+@mixin positive() {
+    // Primary
+    --plural-button-primary-background-color: var(--plural-positive-color-button-primary-bg-default);
+    --plural-button-primary-background-color-hover: var(--plural-positive-color-button-primary-bg-hover);
+    --plural-button-primary-background-color-active: var(--plural-positive-color-button-primary-bg-active);
+    --plural-button-primary-background-color-disabled: var(--plural-positive-color-core-bg-disabled);
+    --plural-button-primary-color: var(--plural-positive-color-button-primary-content-default);
+    --plural-button-primary-color-hover: var(--plural-positive-color-button-primary-content-hover);
+    --plural-button-primary-color-active: var(--plural-positive-color-button-primary-content-active);
+    --plural-button-primary-color-disabled: var(--plural-positive-color-core-content-disabled);
+    --plural-button-primary-border-color: var(--plural-positive-color-button-primary-border-default);
+    --plural-button-primary-border-color-hover: var(--plural-positive-color-button-primary-border-hover);
+    --plural-button-primary-border-color-active: var(--plural-positive-color-button-primary-border-active);
+    --plural-button-primary-border-color-disabled: var(--plural-positive-color-core-border-disabled);
+  }

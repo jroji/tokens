@@ -1,0 +1,144 @@
+@use "../../styles/_breakpoints" as *;
+@use "./commit-button.positive" as *;
+@use "./commit-button.negative" as *;
+
+ :host-context([theme="negative"]) {
+   @media (prefers-color-scheme: dark) {
+     @include negative();
+   }
+
+   @media (prefers-color-scheme: light) {
+     @include negative();
+   }
+ }
+
+ :host-context([theme="positive"]) {
+   @media (prefers-color-scheme: dark) {
+     @include positive();
+   }
+
+   @media (prefers-color-scheme: light) {
+     @include positive();
+   }
+ }
+
+:host {
+  --plural-button-background-color: var(--plural-button-primary-background-color);
+  --plural-button-background-color-hover: var(--plural-button-primary-background-color-hover);
+  --plural-button-background-color-active: var(--plural-button-primary-background-color-active);
+  --plural-button-background-color-disabled: var(--plural-button-primary-background-color-disabled);
+
+  --plural-button-color: var(--plural-button-primary-color);
+  --plural-button-color-hover: var(--plural-button-primary-color-hover);
+
+  --plural-button-color-active: var(--plural-button-primary-color-active);
+  --plural-button-color-disabled: var(--plural-button-primary-color-disabled);
+  
+  --plural-button-border-color: var(--plural-button-primary-border-color);
+  --plural-button-border-color-hover: var(--plural-button-primary-border-color-hover);
+  --plural-button-border-color-active: var(--plural-button-primary-border-color-active);
+  --plural-button-border-color-disabled: var(--plural-button-primary-border-color-disabled);
+
+  display: inline-block;
+  border-radius: var(--plural-button-border-radius);
+  background-color: var(--plural-button-background-color);
+  border-color: var(--plural-button-border-color);
+  border-style: solid;
+  border-width: var(--plural-button-border-width);
+
+  @each $type, $value in $breakpoints {
+      @include breakpoint($type) {
+      // Custom
+      --plural-button-padding-horizontal: var(#{--plural-#{$type}-component-horizontal-padding-sm});
+      --plural-button-padding-vertical: var(#{--plural-#{$type}-component-vertical-padding-sm});
+      --plural-button-gap: var(#{--plural-#{$type}-component-text-to-element-gap-sm});
+      --plural-button-border-radius: var(#{--plural-#{$type}-button-border-radius});
+      --plural-button-border-width: var(#{--plural-#{$type}-border-width-sm});
+      --plural-button-font-family: var(#{--plural-#{$type}-font-button-family});
+      --plural-button-font-size: var(#{--plural-#{$type}-font-button-size});
+      --plural-button-line-height: var(#{--plural-#{$type}-font-button-line-height});
+      --plural-button-font-weight: var(#{--plural-#{$type}-font-button-weight});
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    @include positive();        
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include negative();
+  }
+}
+
+
+button {
+  min-width: var(--plural-button-min-width);
+  min-height: var(--plural-button-min-height);
+  border-radius: var(--plural-button-border-radius);
+  width: auto;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--plural-button-color);
+  font-size: var(--plural-button-font-size);
+  font-family: var(--plural-button-font-family);
+  font-weight: var(--plural-button-font-weight);
+  line-height: var(--plural-button-line-height);
+  padding: var(--plural-button-padding-vertical) var(--plural-button-padding-horizontal);
+  gap: var(--plural-button-gap);
+  text-decoration: none;
+  
+  ::slotted(*) {
+    fill: var(--plural-button-icon-fill);
+    padding: 0;
+    margin: 0;
+  }
+}
+
+:host(:hover) {
+  --plural-button-background-color: var(--plural-button-background-color-hover);
+  --plural-button-color: var(--plural-button-color-hover);
+  --plural-button-icon-stroke: var(--plural-button-color-hover);
+  --plural-button-border-color: var(--plural-button-border-color-hover);
+  
+  ::slotted(*) {
+    --plural-button-icon-fill: var(--plural-button-color-hover);
+  }
+}
+
+:host(:focus-visible) {
+  outline: none;
+  box-shadow: var(--plural-button-focus-border-outset);
+}
+
+:host(:active) {
+  --plural-button-background-color: var(--plural-button-background-color-active);
+  --plural-button-color: var(--plural-button-color-active);
+  --plural-button-icon-fill: var(--plural-button-icon-fill-active);
+  --plural-button-icon-stroke: var(--plural-button-icon-stroke-active);
+  --plural-button-border-color: var(--plural-button-border-color-active);
+
+  ::slotted(*) {
+    --plural-button-icon-fill: var(--plural-button-color-active);
+  }
+}
+
+:host([disabled]) {
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+  --plural-button-border-color: var(--plural-button-background-color-disabled);
+  --plural-button-background-color: var(--plural-button-background-color-disabled);
+  --plural-button-color: var(--plural-button-color-disabled);
+  --plural-button-icon-fill: var(--plural-button-icon-fill-disabled);
+  --plural-button-icon-stroke: var(--plural-button-icon-stroke-disabled);
+
+  ::slotted(*) {
+    --plural-button-icon-fill: var(--plural-button-color-disabled);
+  }
+}

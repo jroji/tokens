@@ -2,15 +2,25 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "add-tokens": "node scripts/add-tokens.js",
     "build-tokens": "style-dictionary build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "style-dictionary": "^4.3.3"
+    "lit": "^3.2.1"
+  },
+  "style-dictionary": "^4.3.3",
+  "devDependencies": {
+    "sass": "^1.86.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
   }
 }

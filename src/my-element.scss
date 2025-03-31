@@ -1,0 +1,68 @@
+@use "./styles/_breakpoints" as *;
+
+:host {
+    display: block;
+    width: 100%;
+
+
+    @each $type, $value in $breakpoints {
+        @include breakpoint($type) {
+            --heading-font-family: var(#{--plural-#{$type}-font-heading-xl-default-family});
+            --heading-font-size: var(#{--plural-#{$type}-font-heading-xl-default-size});
+            --heading-line-height: var(#{--plural-#{$type}-font-heading-xl-default-line-height});
+            --heading-font-weight: var(#{--plural-#{$type}-font-heading-xl-default-weight});
+
+            --body-font-family: var(#{--plural-#{$type}-font-body-xl-default-family});
+            --body-font-size: var(#{--plural-#{$type}-font-body-xl-default-size});
+            --body-line-height: var(#{--plural-#{$type}-font-body-xl-default-line-height});
+            --body-font-weight: var(#{--plural-#{$type}-font-body-xl-default-weight});
+
+            --gap: var(#{--plural-#{$type}-component-text-to-element-gap-lg});
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        --heading-color: var(--plural-positive-color-support-content-info);
+        --body-color: var(--plural-positive-color-core-content-default);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        --heading-color: var(--plural-negative-color-support-content-info);
+        --body-color: var(--plural-negative-color-core-content-default);
+    }
+
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap);
+    height: 100vh;
+    width: 100%;
+}
+
+.hero {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-font-size);
+    line-height: var(--heading-line-height);
+    font-weight: var(--heading-font-weight);
+    margin: 0;
+    color: var(--heading-color);
+}
+
+p {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+    font-weight: var(--body-font-weight);
+    margin: 0;
+}

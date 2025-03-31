@@ -1,0 +1,27 @@
+@use "sass:map";
+
+$breakpoints: (
+  "mobile": 768px,
+  "desktop": 1440px,
+ );
+
+@mixin breakpoint($point) {
+  $prev: "0px";
+
+  @each $name, $width in $breakpoints {
+
+    @if $point == $name {
+      @if $point == "mobile" {
+        @media screen and (max-width: 768px) {
+          @content;
+        }
+      } @else {
+        @media screen and (min-width: $prev) { 
+          @content
+        }
+      }      
+    }
+
+    $prev: $width;
+  }
+}
