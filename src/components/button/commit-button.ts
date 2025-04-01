@@ -33,7 +33,7 @@ export class CommitButton extends LitElement {
         `;
     }
 
-    private _handleClick(e: Event) {
+    private _handleClick() {
         this.dispatchEvent(new CustomEvent('button-click', {
             bubbles: true,
             composed: true

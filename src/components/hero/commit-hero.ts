@@ -32,20 +32,19 @@ export class CommitHero extends LitElement {
             </section>
             <ul class="stats">
                 <li class="stat">
-                    <div class="stat-value">${this.talksValue}</div>
-                    <div class="stat-label light">charlas</div>
+                    <span class="stat-value">${this.talksValue}</span>
+                    <span class="stat-label light">charlas</span>
                 </li>
                 
                 <li class="stat">
-                    <div class="stat-value">${this.attendeesValue}</div>
-                    <div class="stat-label light">asistentes</div>
+                    <span class="stat-value">${this.attendeesValue}</span>
+                    <span class="stat-label light">asistentes</span>
                 </li>
                 
                 <li class="stat">
-                    <div class="stat-value">${this.communitiesValue}</div>
-                    <div class="stat-label light">comunidades</div>
+                    <span class="stat-value">${this.communitiesValue}</span>
+                    <span class="stat-label light">comunidades</span>
                 </li>
-                
             </ul>
         `;
     }
