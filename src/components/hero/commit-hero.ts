@@ -1,11 +1,20 @@
 import { LitElement, html, unsafeCSS } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 import styles from './commit-hero.scss?inline';
 
 @customElement('commit-hero')  
 export class CommitHero extends LitElement {
 
     static styles = unsafeCSS(styles)
+
+    @property({ type: String, reflect: true })
+    talksValue = '70';
+
+    @property({ type: String, reflect: true })
+    attendeesValue = '+1.000';
+
+    @property({ type: String, reflect: true })
+    communitiesValue = '33';
 
     render() {
         return html`
@@ -23,17 +32,17 @@ export class CommitHero extends LitElement {
             </section>
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-value">70</div>
+                    <div class="stat-value">${this.talksValue}</div>
                     <div class="stat-label light">charlas</div>
                 </div>
                 
                 <div class="stat">
-                    <div class="stat-value">+1.000</div>
+                    <div class="stat-value">${this.attendeesValue}</div>
                     <div class="stat-label light">asistentes</div>
                 </div>
                 
                 <div class="stat">
-                    <div class="stat-value">33</div>
+                    <div class="stat-value">${this.communitiesValue}</div>
                     <div class="stat-label light">comunidades</div>
                 </div>
                 

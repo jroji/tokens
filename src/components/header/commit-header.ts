@@ -1,12 +1,9 @@
 import { LitElement, html, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import styles from './commit-header.scss?inline';
 
 @customElement('commit-header')
 export class CommitHeader extends LitElement {
-
-    @property({ type: String, reflect: true })
-    title = 'Commit';
 
     static styles = unsafeCSS(styles)
 
@@ -20,16 +17,16 @@ export class CommitHeader extends LitElement {
                 <nav>
                     <ul>
                         <li>
-                            <a href="/">Agenda</a>
+                            <a href="https://koliseo.com/commit/commit-conf-2025/agenda" target="_blank">Agenda</a>
                         </li>
                         <li>
-                            <a href="/">Entradas</a>
+                            <a href="https://2025.commit-conf.com/es/tickets" target="_blank">Entradas</a>
                         </li>
                         <li>
-                            <a href="/">Dónde</a>
+                            <a href="https://2025.commit-conf.com/es/location" target="_blank">Dónde</a>
                         </li>
                         <li>
-                            <a href="/">Patrocinadores</a>
+                            <a href="https://2025.commit-conf.com/es/sponsors" target="_blank">Patrocinadores</a>
                         </li>
                     </ul>
                 </nav>
