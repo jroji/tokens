@@ -2,6 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://jroji.github.io/tokens",
   "type": "module",
   "scripts": {
     "add-tokens": "node scripts/add-tokens.js",
@@ -9,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,7 @@
   },
   "style-dictionary": "^4.3.3",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.86.0",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
