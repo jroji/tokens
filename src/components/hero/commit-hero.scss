@@ -1,0 +1,132 @@
+@use "../../styles/_breakpoints" as *;
+@use "./commit-hero.positive" as *;
+@use "./commit-hero.negative" as *;
+
+:host-context([theme="negative"]) {
+    @media (prefers-color-scheme: dark) {
+      @include negative();
+    }
+   
+    @media (prefers-color-scheme: light) {
+      @include negative();
+    }
+  }
+   
+  :host-context([theme="positive"]) {
+    @media (prefers-color-scheme: dark) {
+      @include positive();
+    }
+   
+    @media (prefers-color-scheme: light) {
+      @include positive();
+    }
+  }
+   
+:host {
+    --commit-hero-background-color: var(--plural-hero-background-color);
+    --commit-hero-color: var(--plural-hero-color);
+    --commit-hero-shadow: var(--plural-hero-shadow);
+  
+    font-family: var(--heading-font-family);
+     
+    @each $type, $value in $breakpoints {
+        @include breakpoint($type) {
+        --commit-hero-padding-horizontal: var(#{--plural-#{$type}-component-horizontal-padding-none});
+        --commit-hero-padding-vertical: var(#{--plural-#{$type}-component-vertical-padding-xl});
+        --commit-hero-gap: var(#{--plural-#{$type}-component-text-to-element-gap-xl});
+        --commit-hero-stats-gap: var(#{--plural-#{$type}-component-text-to-element-gap-sm});
+
+        --commit-hero-font-size: var(#{--plural-#{$type}-font-heading-xl-default-size});
+        --commit-hero-font-weight: var(#{--plural-#{$type}-font-heading-xl-default-weight});
+        --commit-hero-line-height: var(#{--plural-#{$type}-font-heading-xl-default-line-height});
+
+        --commit-hero-stats-font-size: var(#{--plural-#{$type}-font-heading-sm-strong-size});
+        --commit-hero-stats-font-weight: var(#{--plural-#{$type}-font-heading-sm-strong-weight});
+        --commit-hero-stats-line-height: var(#{--plural-#{$type}-font-heading-sm-strong-line-height});
+      }
+    }
+   
+    @media (prefers-color-scheme: light) {
+      @include positive();        
+    }
+   
+    @media (prefers-color-scheme: dark) {
+      @include negative();
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 9.7rem);
+    position: relative;
+    text-transform: uppercase;
+}
+
+.hero-image {
+    filter: brightness(.5);
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.hero-content {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--commit-hero-gap);
+}
+
+.hero-logo {
+    width: max(50%, 20rem);
+}
+
+.hero-content p {
+    color: var(--commit-hero-color);
+    font-size: var(--commit-hero-font-size);
+    margin: 0;
+    text-shadow: var(--commit-hero-shadow);
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--commit-hero-gap);
+    justify-content: center;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 99px;
+    box-sizing: border-box;
+    background-color: var(--commit-hero-background-color);
+    color: var(--commit-hero-color);
+    gap: var(--commit-hero-gap);
+    padding: var(--commit-hero-padding-vertical) var(--commit-hero-padding-horizontal);
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: var(--commit-hero-stats-gap);
+    font-size: var(--commit-hero-stats-font-size);
+    font-weight: var(--commit-hero-stats-font-weight);
+    line-height: var(--commit-hero-stats-line-height);
+}
+
+@media (min-width: 768px) {
+    .stats {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
