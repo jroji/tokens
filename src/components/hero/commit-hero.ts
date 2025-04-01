@@ -24,29 +24,29 @@ export class CommitHero extends LitElement {
                     <img class="hero-logo" src="/commit-logo.svg" alt="Commit" />
                     <p>Madrid, 4-5 de Abril</p>
                     <div class="hero-actions">
-                        <commit-button>Agenda <small>Descúbrela ahora</small></commit-button>
-                        <commit-button variant="secondary">Entradas <small>Ya disponibles</small></commit-button>
+                        <commit-button href="https://koliseo.com/commit/commit-conf-2025/agenda" target="_blank">Agenda <small>Descúbrela ahora</small></commit-button>
+                        <commit-button variant="secondary" href="https://koliseo.com/commit/commit-conf-2025/tickets" target="_blank">Entradas <small>Ya disponibles</small></commit-button>
                     </div>
                 </div>
                 
             </section>
-            <div class="stats">
-                <div class="stat">
+            <ul class="stats">
+                <li class="stat">
                     <div class="stat-value">${this.talksValue}</div>
                     <div class="stat-label light">charlas</div>
-                </div>
+                </li>
                 
-                <div class="stat">
+                <li class="stat">
                     <div class="stat-value">${this.attendeesValue}</div>
                     <div class="stat-label light">asistentes</div>
-                </div>
+                </li>
                 
-                <div class="stat">
+                <li class="stat">
                     <div class="stat-value">${this.communitiesValue}</div>
                     <div class="stat-label light">comunidades</div>
-                </div>
+                </li>
                 
-            </div>
+            </ul>
         `;
     }
 }

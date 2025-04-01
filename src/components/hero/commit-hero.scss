@@ -31,6 +31,7 @@
      
     @each $type, $value in $breakpoints {
         @include breakpoint($type) {
+        --commit-hero-margin-horizontal: var(#{--plural-#{$type}-component-horizontal-margin-none});
         --commit-hero-padding-horizontal: var(#{--plural-#{$type}-component-horizontal-padding-none});
         --commit-hero-padding-vertical: var(#{--plural-#{$type}-component-vertical-padding-xl});
         --commit-hero-gap: var(#{--plural-#{$type}-component-text-to-element-gap-xl});
@@ -108,6 +109,8 @@
     flex-wrap: wrap;
     min-height: 99px;
     box-sizing: border-box;
+    list-style: none;
+    margin: var(--commit-hero-margin-horizontal);
     background-color: var(--commit-hero-background-color);
     color: var(--commit-hero-color);
     gap: var(--commit-hero-gap);
