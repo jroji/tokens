@@ -1,0 +1,88 @@
+@use "../../styles/_breakpoints" as *;
+@use "./commit-header.positive" as *;
+@use "./commit-header.negative" as *;
+
+:host-context([theme="negative"]) {
+  @media (prefers-color-scheme: dark) {
+    @include negative();
+  }
+ 
+  @media (prefers-color-scheme: light) {
+    @include negative();
+  }
+}
+ 
+:host-context([theme="positive"]) {
+  @media (prefers-color-scheme: dark) {
+    @include positive();
+  }
+ 
+  @media (prefers-color-scheme: light) {
+    @include positive();
+  }
+}
+ 
+:host {
+  --commit-header-background-color: var(--plural-header-background-color);
+  --commit-header-color: var(--plural-header-color);
+  --commit-header-shadow: var(--plural-header-shadow);
+
+  font-family: var(--action-link-font-family);
+   
+  @each $type, $value in $breakpoints {
+      @include breakpoint($type) {
+      --commit-header-padding-horizontal: var(#{--plural-#{$type}-component-horizontal-padding-2xl});
+      --commit-header-padding-vertical: var(#{--plural-#{$type}-component-vertical-padding-none});
+      --commit-header-gap: var(#{--plural-#{$type}-component-text-to-element-gap-xl});
+      --commit-header-font-size: var(#{--plural-#{$type}-font-action-link-size});
+      --commit-header-font-weight: var(#{--plural-#{$type}-font-action-link-weight});
+      --commit-header-line-height: var(#{--plural-#{$type}-font-action-link-line-height});
+    }
+  }
+ 
+  @media (prefers-color-scheme: light) {
+    @include positive();        
+  }
+ 
+  @media (prefers-color-scheme: dark) {
+    @include negative();
+  }
+}
+
+header {
+    display: flex;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--commit-header-gap);
+    background-color: var(--commit-header-background-color);
+    box-shadow: var(--commit-header-shadow);
+    padding: var(--commit-header-padding-vertical) var(--commit-header-padding-horizontal);
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 25px;
+    width: 115px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: var(--commit-header-gap);
+}
+
+a {
+    color: var(--commit-header-color);
+    text-decoration: none;
+    font-size: var(--commit-header-font-size);
+    font-weight: var(--commit-header-font-weight);
+    line-height: var(--commit-header-line-height);
+}
+
+a:hover {
+    text-decoration: underline;
+}

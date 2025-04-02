@@ -4,6 +4,7 @@
     display: block;
     width: 100%;
 
+    font-family: var(--body-font-family);
 
     @each $type, $value in $breakpoints {
         @include breakpoint($type) {
@@ -16,6 +17,11 @@
             --body-font-size: var(#{--plural-#{$type}-font-body-xl-default-size});
             --body-line-height: var(#{--plural-#{$type}-font-body-xl-default-line-height});
             --body-font-weight: var(#{--plural-#{$type}-font-body-xl-default-weight});
+
+            --action-link-font-family: var(#{--plural-#{$type}-font-action-link-family});
+            --action-link-font-size: var(#{--plural-#{$type}-font-action-link-size});
+            --action-link-line-height: var(#{--plural-#{$type}-font-action-link-line-height});
+            --action-link-font-weight: var(#{--plural-#{$type}-font-action-link-weight});
 
             --gap: var(#{--plural-#{$type}-component-text-to-element-gap-lg});
         }
@@ -33,22 +39,6 @@
 
 }
 
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: var(--gap);
-    height: 100vh;
-    width: 100%;
-}
-
-.hero {
-    height: 50%;
-    width: 100%;
-    object-fit: cover;
-}
 
 h1 {
     font-family: var(--heading-font-family);
