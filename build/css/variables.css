@@ -11,7 +11,7 @@
   --plural-negative-color-core-content-brand: rgba(88, 157, 255, 255);
   --plural-negative-color-core-content-hover: rgba(236, 238, 240, 255);
   --plural-negative-color-core-content-active: rgba(224, 227, 230, 255);
-  --plural-negative-color-core-bg-default: rgba(219, 0, 0, 255);
+  --plural-negative-color-core-bg-default: rgba(19, 39, 55, 255);
   --plural-negative-color-core-bg-neutral: rgba(102, 117, 128, 255);
   --plural-negative-color-core-bg-neutral-low: rgba(126, 139, 148, 255);
   --plural-negative-color-core-bg-inverse: rgba(255, 255, 255, 255);
@@ -88,7 +88,7 @@
   --plural-negative-color-decorative-blue: rgba(75, 149, 255, 255);
   --plural-negative-color-decorative-pink: rgba(255, 72, 228, 255);
   --plural-negative-color-decorative-purple: rgba(146, 62, 255, 255);
-  --plural-positive-color-core-content-default: rgba(219, 0, 0, 255);
+  --plural-positive-color-core-content-default: rgba(19, 39, 55, 255);
   --plural-positive-color-core-content-emphasis: rgba(7, 28, 44, 255);
   --plural-positive-color-core-content-soft: rgba(90, 106, 117, 255);
   --plural-positive-color-core-content-inverse: rgba(255, 255, 255, 255);
