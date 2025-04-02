@@ -18,8 +18,8 @@
   "dependencies": {
     "lit": "^3.2.1"
   },
-  "style-dictionary": "^4.3.3",
   "devDependencies": {
+    "style-dictionary": "^4.3.3",
     "gh-pages": "^6.3.0",
     "sass": "^1.86.0",
     "typescript": "~5.7.2",
