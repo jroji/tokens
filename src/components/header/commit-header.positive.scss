@@ -1,5 +1,5 @@
 @mixin positive() {
-    --plural-header-background-color: --plural-positive-background-core-content-default;;
-    --plural-header-color: --plural-positive-background-core-content-default;;
+    --plural-header-background-color: var(--plural-positive-color-core-bg-default);
+    --plural-header-color: var(--plural-positive-background-core-content-default);
     --plural-header-shadow: 0 1px 7px 2px rgba(0, 0, 0, .5);
 }

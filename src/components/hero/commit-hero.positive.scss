@@ -1,5 +1,5 @@
 @mixin positive() {
-    --plural-hero-background-color: #b91c1c;
-    --plural-hero-color: #fff;
+    --plural-hero-background-color:var(--plural-positive-color-core-bg-default);
+    --plural-hero-color:var(--plural-positive-color-core-content-default);
     --plural-hero-shadow: 0 0 3rem rgba(0, 0, 50, .8);
 }
