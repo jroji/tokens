@@ -19,9 +19,9 @@ export class CommitHero extends LitElement {
     render() {
         return html`
             <section class="hero">
-                <img class="hero-image" src="/hero.avif" aria-hidden="true" />
+                <img class="hero-image" src="hero.avif" aria-hidden="true" />
                 <div class="hero-content">
-                    <img class="hero-logo" src="/commit-logo.svg" alt="Commit" />
+                    <img class="hero-logo" src="commit-logo.svg" alt="Commit" />
                     <p>Madrid, 4-5 de Abril</p>
                     <div class="hero-actions">
                         <commit-button href="https://koliseo.com/commit/commit-conf-2025/agenda" target="_blank">Agenda <small>Descúbrela ahora</small></commit-button>

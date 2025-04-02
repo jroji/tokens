@@ -11,7 +11,7 @@ export class CommitHeader extends LitElement {
         return html`
             <header>
                 <a href="/">
-                    <img class="logo" src="/commit-logo.svg" alt="Commit" />
+                    <img class="logo" src="commit-logo.svg" alt="Commit" />
                 </a>
 
                 <nav>

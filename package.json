@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "homepage": "https://jroji.github.io/tokens",
-  "type": "module",
   "scripts": {
     "add-tokens": "node scripts/add-tokens.js",
     "build-tokens": "style-dictionary build",
