@@ -402,7 +402,7 @@ internal struct StyleDictionaryStruct {
     internal static let pluralNegativeColorButtonTertiaryContentHover = rgba(255, 255, 255, 255)
     internal static let pluralNegativeColorCoreBgActive = rgba(31, 50, 65, 255)
     internal static let pluralNegativeColorCoreBgBrand = rgba(88, 157, 255, 255)
-    internal static let pluralNegativeColorCoreBgDefault = rgba(19, 39, 55, 255)
+    internal static let pluralNegativeColorCoreBgDefault = rgba(219, 0, 0, 255)
     internal static let pluralNegativeColorCoreBgDisabled = rgba(78, 95, 107, 255)
     internal static let pluralNegativeColorCoreBgHover = rgba(7, 28, 44, 255)
     internal static let pluralNegativeColorCoreBgInverse = rgba(255, 255, 255, 255)
