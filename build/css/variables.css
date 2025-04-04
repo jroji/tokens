@@ -3,7 +3,7 @@
  */
 
 :root {
-  --plural-negative-color-core-content-default: rgba(255, 255, 255, 255);
+  --plural-negative-color-core-content-default: rgba(114, 174, 255, 255);
   --plural-negative-color-core-content-emphasis: rgba(255, 255, 255, 255);
   --plural-negative-color-core-content-soft: rgba(199, 205, 210, 255);
   --plural-negative-color-core-content-inverse: rgba(7, 28, 44, 255);
@@ -11,7 +11,7 @@
   --plural-negative-color-core-content-brand: rgba(88, 157, 255, 255);
   --plural-negative-color-core-content-hover: rgba(236, 238, 240, 255);
   --plural-negative-color-core-content-active: rgba(224, 227, 230, 255);
-  --plural-negative-color-core-bg-default: rgba(250, 0, 0, 255);
+  --plural-negative-color-core-bg-default: rgba(146, 62, 255, 255);
   --plural-negative-color-core-bg-neutral: rgba(102, 117, 128, 255);
   --plural-negative-color-core-bg-neutral-low: rgba(126, 139, 148, 255);
   --plural-negative-color-core-bg-inverse: rgba(255, 255, 255, 255);
@@ -54,11 +54,11 @@
   --plural-negative-color-support-content-success: rgba(177, 255, 126, 255);
   --plural-negative-color-support-content-warning: rgba(255, 208, 105, 255);
   --plural-negative-color-support-content-info: rgba(142, 191, 255, 255);
-  --plural-negative-color-button-primary-content-default: rgba(15, 44, 78, 255);
+  --plural-negative-color-button-primary-content-default: rgba(255, 255, 255, 255);
   --plural-negative-color-button-primary-content-hover: rgba(NaN, NaN, NaN, NaN);
   --plural-negative-color-button-primary-content-active: rgba(255, 255, 255, 255);
-  --plural-negative-color-button-primary-bg-default: rgba(88, 157, 255, 255);
-  --plural-negative-color-button-primary-bg-hover: rgba(58, 125, 216, 255);
+  --plural-negative-color-button-primary-bg-default: rgba(255, 230, 37, 255);
+  --plural-negative-color-button-primary-bg-hover: rgba(255, 73, 103, 255);
   --plural-negative-color-button-primary-bg-active: rgba(88, 157, 255, 255);
   --plural-negative-color-button-primary-border-default: rgba(255, 255, 255, 255);
   --plural-negative-color-button-primary-border-hover: rgba(58, 125, 216, 255);
