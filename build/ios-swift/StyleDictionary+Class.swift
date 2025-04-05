@@ -374,7 +374,7 @@ public class StyleDictionaryClass {
     public static let pluralMobileLayoutSpacingXl = 60px
     public static let pluralMobileLayoutSpacingXs = 12px
     public static let pluralNegativeColorButtonPrimaryBgActive = rgba(88, 157, 255, 255)
-    public static let pluralNegativeColorButtonPrimaryBgDefault = rgba(255, 230, 37, 255)
+    public static let pluralNegativeColorButtonPrimaryBgDefault = rgba(255, 72, 228, 255)
     public static let pluralNegativeColorButtonPrimaryBgHover = rgba(255, 73, 103, 255)
     public static let pluralNegativeColorButtonPrimaryBorderActive = rgba(88, 157, 255, 255)
     public static let pluralNegativeColorButtonPrimaryBorderDefault = rgba(255, 255, 255, 255)
@@ -402,7 +402,7 @@ public class StyleDictionaryClass {
     public static let pluralNegativeColorButtonTertiaryContentHover = rgba(255, 255, 255, 255)
     public static let pluralNegativeColorCoreBgActive = rgba(31, 50, 65, 255)
     public static let pluralNegativeColorCoreBgBrand = rgba(88, 157, 255, 255)
-    public static let pluralNegativeColorCoreBgDefault = rgba(146, 62, 255, 255)
+    public static let pluralNegativeColorCoreBgDefault = rgba(250, 0, 0, 255)
     public static let pluralNegativeColorCoreBgDisabled = rgba(78, 95, 107, 255)
     public static let pluralNegativeColorCoreBgHover = rgba(7, 28, 44, 255)
     public static let pluralNegativeColorCoreBgInverse = rgba(255, 255, 255, 255)
